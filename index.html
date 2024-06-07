@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>New seven wonders of the world</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="slider">
-            <div class="slides" style="--img: url('assets/coliseu.jpg')"></div>
-                <div class="content"></div>
-            <div class="slides" style="--img: url('assets/chizenitza.jpg')"></div>
-                <div class="content"></div>
-            <div class="slides" style="--img: url('assets/cristoredentor.jpg')"></div>
-                <div class="content"></div>
-            <div class="slides" style="--img: url('assets/machupichu.jpg')"></div>
-                <div class="content"></div>
-            <div class="slides" style="--img: url('assets/muralhadachina.jpg')"></div>
-                <div class="content"></div>
-            <div class="slides" style="--img: url('assets/petrajordania.jpg')"></div>
-                <div class="content"></div>
-            <div class="slides" style="--img: url('assets/tajmahaul.jpg')"></div>
-                <div class="content"></div>
-            </div>
+  <section class="slider-container">
+    <div class="slider-images">
+      <div class="slider-img">
+        <img src="assets/chizenitza.jpg" alt="1">
+        <h1>Chichen Itza</h1>
+        <div class="details">
+          <h2>Chichen Itza</h2>
+          <p>Located in Mexico, Chichen Itza is a large pre-Columbian archaeological site built by the Maya civilization.</p>
         </div>
-        <div class="buttons">
-            <span class="prev"></span>
-            <span class="next"></span>
+      </div>
+      <div class="slider-img">
+        <img src="assets/coliseu.jpg" alt="2">
+        <h1>Coliseum</h1>
+        <div class="details">
+          <h2>Coliseum</h2>
+          <p>Located in Rome, Italy, the Coliseum is an ancient amphitheater built during the Roman Empire.</p>
         </div>
-    </div> 
+      </div>
+      <div class="slider-img">
+        <img src="assets/cristoredentor.jpg" alt="3">
+        <h1>Christ Redeemer</h1>
+        <div class="details">
+          <h2>Christ the Redeemer</h2>
+          <p>Located in Rio de Janeiro, Brazil, Christ the Redeemer is an iconic statue of Jesus Christ.</p>
+        </div>
+      </div>
+      <div class="slider-img active">
+        <img src="assets/machupichu.jpg" alt="4">
+        <h1>Machu Picchu</h1>
+        <div class="details">
+          <h2>Machu Picchu</h2>
+          <p>Located in Peru, Machu Picchu is an ancient Incan city set high in the Andes Mountains.</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="assets/muralhadachina.jpg" alt="5">
+        <h1>Wall China</h1>
+        <div class="details">
+          <h2>Great Wall of China</h2>
+          <p>Located in China, the Great Wall is a series of fortifications made of various materials, built along the northern borders of China.</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="assets/petrajordania.jpg" alt="6">
+        <h1>Petra</h1>
+        <div class="details">
+          <h2>Petra</h2>
+          <p>Located in Jordan, Petra is a famous archaeological site known for its rock-cut architecture and water conduit system.</p>
+        </div>
+      </div>
+      <div class="slider-img">
+        <img src="assets/tajmahaul.jpg" alt="7">
+        <h1>Taj Mahal</h1>
+        <div class="details">
+          <h2>Taj Mahal</h2>
+          <p>Located in Agra, India, the Taj Mahal is a white marble mausoleum built in memory of Mumtaz Mahal by her husband Shah Jahan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="jQuery.js"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".slider-img").on("click", function () {
+        $(".slider-img").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
 </body>
 </html>
